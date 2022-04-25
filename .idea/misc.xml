@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/IlyaK/StudioProjects/Loftmoney/app/src/main/res/drawable/button_selector.xml" value="0.1" />
+        <entry key="..\:/Users/IlyaK/StudioProjects/Loftmoney/app/src/main/res/drawable/ic_add_green.xml" value="0.1" />
+        <entry key="..\:/Users/IlyaK/StudioProjects/Loftmoney/app/src/main/res/drawable/selector_button.xml" value="0.1" />
+        <entry key="..\:/Users/IlyaK/StudioProjects/Loftmoney/app/src/main/res/drawable/selector_button_icon.xml" value="0.1" />
+        <entry key="..\:/Users/IlyaK/StudioProjects/Loftmoney/app/src/main/res/layout/activity_add_item.xml" value="0.1" />
         <entry key="..\:/Users/IlyaK/StudioProjects/Loftmoney/app/src/main/res/layout/activity_main.xml" value="0.1816123188405797" />
       </map>
     </option>
