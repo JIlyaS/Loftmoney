@@ -22,9 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int ADD_ITEM_REQUEST_CODE = 100;
 
-//    private static final String KEY_AMOUNT = "amount";
-//    private static final String KEY_NAME = "name";
-
     private RecyclerView itemsView;
 
     private MoneyItemsAdapter moneyItemsAdapter = new MoneyItemsAdapter();
@@ -42,10 +39,6 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(v -> startActivityForResult(
                 new Intent(MainActivity.this, AddItemActivity.class), ADD_ITEM_REQUEST_CODE
         ));
-
-//        Intent intent = new Intent(this, AddItemActivity.class);
-//        startActivity(intent);
-
     }
 
     private void generateMoney() {
@@ -54,17 +47,6 @@ public class MainActivity extends AppCompatActivity {
       moneyItems.add(new MoneyItem("Salary", "300000"));
       moneyItemsAdapter.setData(moneyItems);
     }
-
-//    @Override
-//    protected  void onActivityrsult(final int requestCode, final int resultCode, @Nullable final Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if (requestCode == ADD_ITEM_REQUEST_CODE && resultCode == RESULT_OK) {
-//            if (data != null) {
-//                moneyItemsAdapter.add(new MoneyItem(data.getStringExtra(KEY_NAME), Integer.parseInt(data.getStringExtra(KEY_AMOUNT))));
-//            }
-//        }
-//    }
 
     private void configureRecyclerView() {
       itemsView = findViewById(R.id.money_list);
