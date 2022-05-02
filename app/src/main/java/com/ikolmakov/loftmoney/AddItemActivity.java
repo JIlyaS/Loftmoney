@@ -10,17 +10,28 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class AddItemActivity extends AppCompatActivity {
+
+    private EditText textExpense;
+    private EditText textName;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
 
-        Button button = findViewById(R.id.add_button);
-        EditText textExpense = findViewById(R.id.expense);
-//        EditText textName = findViewById(R.id.name);
+        Button addButton = findViewById(R.id.add_button);
+        textExpense = findViewById(R.id.expense);
+        textName = findViewById(R.id.name);
 
-        textExpense.addTextChangedListener(new TextWatcher() {
+        setTextWatcher(textExpense, addButton);
+        setTextWatcher(textName, addButton);
+    }
+
+    private void setTextWatcher(EditText editText, Button addButton) {
+        editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -33,10 +44,10 @@ public class AddItemActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                if (!editable.toString().equals("")) {
-                    button.setEnabled(true);
+                if (!textExpense.getText().toString().isEmpty() && !textName.getText().toString().isEmpty()) {
+                    addButton.setEnabled(true);
                 } else {
-                    button.setEnabled(false);
+                    addButton.setEnabled(false);
                 }
             }
         });
