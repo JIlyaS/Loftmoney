@@ -13,4 +13,8 @@
     <color name="accent_color">#FFFF9E57</color>
     <color name="background_color">#FF336FEE</color>
     <color name="grey">#FFE3E3E3</color>
+    <color name="color_indicator">#FFFFC107</color>
+    <color name="color_active">#FFFFFFFF</color>
+    <color name="color_inactive">#B38BAAEF</color>
+    <color name="blue">#FF4A90E2</color>
 </resources>

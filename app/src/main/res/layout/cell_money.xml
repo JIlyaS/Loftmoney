@@ -41,20 +41,4 @@
         android:layout_height="1dp"
         />
 
-    <!--    <androidx.appcompat.widget.AppCompatTextView-->
-<!--        android:id="@+id/moneyCellTitleView"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:textSize="20sp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:textColor="@android:color/black"/>-->
-
-<!--    <androidx.appcompat.widget.AppCompatTextView-->
-<!--        android:id="@+id/moneyCellValueView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:alpha="0.8"-->
-<!--        android:textColor="@android:color/black"/>-->
-
 </FrameLayout>
