@@ -38,37 +38,5 @@ public class MainActivity extends AppCompatActivity {
         // делает так, чтобы активная вкладка автоматически менялась
         // при перелистывании.
         tabs.setupWithViewPager(pages);
-
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-
-        pages.addOnPageChangeListener(
-                new ViewPager.OnPageChangeListener() {
-                    @Override
-                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//                        Здесь не могу прокинуть цвет дальше!
-//                        if (position == 0) {
-//                            Bundle bundle = new Bundle();
-//                            bundle.putInt("color", R.color.success_color);
-//                            budgetFragment.setArguments(bundle);
-//                            fragmentTransaction.add(R.id.fragment_container_view, BudgetFragment.class, null).commit();
-//                        } else if (position == 1) {
-//                           Bundle bundle = new Bundle();
-//                           bundle.putInt("color", R.color.success_color);
-//                           budgetFragment.setArguments(bundle);
-//                           fragmentTransaction.add(R.id.fragment_container_view, BudgetFragment.class, null).commit();
-//                        }
-                    }
-
-                    @Override
-                    public void onPageSelected(int position) {
-
-                    }
-
-                    @Override
-                    public void onPageScrollStateChanged(int state) {
-
-                    }
-                }
-        );
     }
 }

@@ -29,6 +29,11 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
             return new BalanceFragment();
         Bundle args = new Bundle();
         args.putString("type", types[position]);
+        if (position == 0) {
+            args.putString("typeFragment", "expenses");
+        } else if (position == 1) {
+            args.putString("typeFragment", "income");
+        }
         final BudgetFragment itemsFragment = new BudgetFragment();
         itemsFragment.setArguments(args);
         return itemsFragment;
