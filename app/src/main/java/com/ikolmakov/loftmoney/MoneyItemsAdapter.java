@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -26,6 +27,11 @@ public class MoneyItemsAdapter extends RecyclerView.Adapter<MoneyItemsAdapter.Mo
         notifyDataSetChanged();
     }
 
+    public void addItem(MoneyItem item) {
+        moneyItemList.add(item);
+        notifyDataSetChanged();
+    }
+
     public void setMoneyItemAdapterClick(MoneyItemAdapterClick moneyItemAdapterClick) {
         this.moneyItemAdapterClick = moneyItemAdapterClick;
     }
@@ -34,8 +40,6 @@ public class MoneyItemsAdapter extends RecyclerView.Adapter<MoneyItemsAdapter.Mo
     @NonNull
     @Override
     public MoneyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        View itemView = View.inflate(parent.getContext(), R.layout.cell_money, null);
-//        return new MoneyViewHolder(itemView);
 
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
 
@@ -80,6 +84,5 @@ public class MoneyItemsAdapter extends RecyclerView.Adapter<MoneyItemsAdapter.Mo
                 }
             });
         }
-
     }
 }
